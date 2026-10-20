@@ -32,7 +32,7 @@
 <body>
 
 <h1>Privacy Policy</h1>
-<p class="meta">App: MobLife &nbsp;|&nbsp; Last updated: October 19, 2026 &nbsp;|&nbsp; Contact: <a href="mailto:mobflow.dev@gmail.com">mobflow.dev@gmail.com</a></p>
+<p class="meta">App: MobLife &nbsp;|&nbsp; Last updated: October 20, 2026 &nbsp;|&nbsp; Contact: <a href="mailto:mobflow.dev@gmail.com">mobflow.dev@gmail.com</a></p>
 
 <p>MobLife ("we", "our", or "the app") is committed to protecting your privacy. This policy explains what data we collect, how we use it, and what your rights are.</p>
 
@@ -40,54 +40,38 @@
 <p>MobLife is an independent app developed by Aathraey. Contact: <a href="mailto:mobflow.dev@gmail.com">mobflow.dev@gmail.com</a>.</p>
 
 <h2>2. What Data We Collect</h2>
+<p><strong>None.</strong> Your habit logs and game progress (XP, level, Mobs, quests, boss progress) are stored only on your phone. The app does not send them anywhere.</p>
+<p><strong>We do not collect:</strong> your name, email address, phone number, location, contacts, photos, payment information, or any health data.</p>
 
-<table>
-  <thead>
-    <tr><th>Data</th><th>What it is</th><th>Where it's stored</th><th>Linked to identity?</th><th>Used for tracking?</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Anonymous user ID</td><td>A random Firebase UID generated on first launch. No name, email, or personal info.</td><td>Firebase (Google Cloud)</td><td>No</td><td>No</td></tr>
-    <tr><td>Habit logs</td><td>Self-reported daily habit completions (e.g., "completed exercise today: yes"). No content, no description.</td><td>Firebase Firestore + device local storage</td><td>No (linked only to anonymous UID)</td><td>No</td></tr>
-    <tr><td>Game state</td><td>XP, level, caught mob creature, quests, boss progress.</td><td>Firebase Firestore + device local storage</td><td>No</td><td>No</td></tr>
-  </tbody>
-</table>
-
-<p><strong>We do not collect:</strong> your name, email address, phone number, location, contacts, photos, payment information, or any health data beyond what you voluntarily self-report as habit logs.</p>
-
-<h2>3. How We Use Data</h2>
-<ul>
-  <li>To keep a copy of your game progress off your device.</li>
-</ul>
-<p>We do not use your data for advertising, analytics, profiling, or any purpose beyond core app functionality.</p>
+<h2>3. Older Versions and Cloud Copies</h2>
+<p>Versions up to 2.0.0 also saved a copy of your progress in Firebase (Google Cloud), linked to a random anonymous ID with no name or email. When you update, the app deletes that copy and the anonymous ID once, then never contacts Firebase again. If you are offline, it tries again the next time you open the app.</p>
 
 <h2>4. Third-Party Services</h2>
-
 <table>
   <thead>
     <tr><th>Service</th><th>Purpose</th><th>Privacy Policy</th></tr>
   </thead>
   <tbody>
-    <tr><td>Firebase (Google)</td><td>Anonymous authentication and cloud data storage</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
-    <tr><td>Bundled assets</td><td>Creature sprites are bundled locally — no external image CDN requests</td><td>n/a</td></tr>
+    <tr><td>Firebase (Google)</td><td>Only used to delete a cloud copy left by an older version</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
+    <tr><td>Bundled assets</td><td>Creature sprites are bundled locally. No external image requests</td><td>n/a</td></tr>
   </tbody>
 </table>
 
-<h2>5. Data Retention</h2>
-<p>Your data is retained in Firebase Firestore for as long as you use the app. If you perform a factory reset inside the app (System tab → Factory Reset), your cloud data is deleted immediately.</p>
+<h2>5. Backups You Make</h2>
+<p>System → Export creates a backup file and opens your phone's share sheet. Where that file goes is your choice, and we never see it.</p>
 
 <h2>6. Children's Privacy</h2>
 <p>MobLife is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has used the app and data has been stored, contact us at <a href="mailto:mobflow.dev@gmail.com">mobflow.dev@gmail.com</a> and we will delete it promptly.</p>
 
 <h2>7. Your Rights</h2>
-<p>You can delete all of your data at any time by using the factory reset feature inside the app (System tab → Factory Reset). This deletes both local storage and your Firebase cloud document. You can also ask us to delete it without the app. See <a href="#delete-account">Delete Your Account and Data</a> below.</p>
+<p>You can delete all of your data at any time with the factory reset inside the app (System tab → Factory Reset), or by uninstalling the app. See <a href="#delete-account">Delete Your Account and Data</a> below.</p>
 
 <h2 id="delete-account">8. Delete Your Account and Data</h2>
-<p>You can delete your MobLife account and all data linked to it in either of these ways. You do not need to reinstall the app.</p>
 <ol>
-  <li><strong>In the app:</strong> open the System tab and tap Factory Reset. This deletes the data on your device and your cloud copy right away.</li>
-  <li><strong>Without the app:</strong> email <a href="mailto:mobflow.dev@gmail.com?subject=Delete%20my%20MobLife%20data">mobflow.dev@gmail.com</a> with the subject "Delete my MobLife data." Include your sync ID if you have one. You can find it in the app's System tab, under Cloud Sync. We will delete your cloud data and anonymous account within 30 days and reply to confirm.</li>
+  <li><strong>In the app:</strong> open the System tab and tap Factory Reset. This deletes everything on your phone, and any cloud copy an older version left, right away.</li>
+  <li><strong>Without the app:</strong> uninstalling deletes everything on your phone. If you used an older version and want its cloud copy gone without updating, email <a href="mailto:mobflow.dev@gmail.com?subject=Delete%20my%20MobLife%20data">mobflow.dev@gmail.com</a> with the subject "Delete my MobLife data." Include your old sync ID if you saved it. We will delete the matching cloud data and anonymous ID within 30 days and reply to confirm.</li>
 </ol>
-<p>What gets deleted: your anonymous user ID, your habit logs, and your game state (XP, level, Mobs, quests, and boss progress). We do not keep a copy after deletion.</p>
+<p>What gets deleted: your habit logs and game state (XP, level, Mobs, quests, and boss progress), plus the anonymous ID if an older version created one. We do not keep a copy after deletion.</p>
 
 <h2>9. Changes to This Policy</h2>
 <p>We may update this policy from time to time. The "Last updated" date at the top of this page will reflect any changes. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
